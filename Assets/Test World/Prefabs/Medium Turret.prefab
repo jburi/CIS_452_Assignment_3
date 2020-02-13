@@ -659,11 +659,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7875397975292750852}
     m_Modifications:
-    - target: {fileID: 3188650221940119556, guid: 5905421fd79ff3a419959cc6a9a8be22,
-        type: 3}
-      propertyPath: m_Name
-      value: Cannon (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 3188650221940119559, guid: 5905421fd79ff3a419959cc6a9a8be22,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -729,15 +724,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3188650221940119558, guid: 5905421fd79ff3a419959cc6a9a8be22,
+    - target: {fileID: 3188650221940119556, guid: 5905421fd79ff3a419959cc6a9a8be22,
         type: 3}
-      propertyPath: m_AimSlider
-      value: 
-      objectReference: {fileID: 3525485427355832952}
-    - target: {fileID: 3188650221940119558, guid: 5905421fd79ff3a419959cc6a9a8be22,
-        type: 3}
-      propertyPath: m_ShootingAudio
-      value: 
+      propertyPath: m_Name
+      value: Cannon (2)
       objectReference: {fileID: 0}
     - target: {fileID: 3188650222371119849, guid: 5905421fd79ff3a419959cc6a9a8be22,
         type: 3}
@@ -754,6 +744,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3188650221940119558, guid: 5905421fd79ff3a419959cc6a9a8be22,
+        type: 3}
+      propertyPath: m_AimSlider
+      value: 
+      objectReference: {fileID: 3525485427355832952}
+    - target: {fileID: 3188650221940119558, guid: 5905421fd79ff3a419959cc6a9a8be22,
+        type: 3}
+      propertyPath: m_ShootingAudio
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5905421fd79ff3a419959cc6a9a8be22, type: 3}
 --- !u!1001 &3525485427006359432
@@ -763,11 +763,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7875397975292750852}
     m_Modifications:
-    - target: {fileID: 3188650221940119556, guid: 5905421fd79ff3a419959cc6a9a8be22,
-        type: 3}
-      propertyPath: m_Name
-      value: Cannon (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 3188650221940119559, guid: 5905421fd79ff3a419959cc6a9a8be22,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -833,15 +828,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3188650221940119558, guid: 5905421fd79ff3a419959cc6a9a8be22,
+    - target: {fileID: 3188650221940119556, guid: 5905421fd79ff3a419959cc6a9a8be22,
         type: 3}
-      propertyPath: m_AimSlider
-      value: 
-      objectReference: {fileID: 3525485427355832952}
-    - target: {fileID: 3188650221940119558, guid: 5905421fd79ff3a419959cc6a9a8be22,
-        type: 3}
-      propertyPath: m_ShootingAudio
-      value: 
+      propertyPath: m_Name
+      value: Cannon (3)
       objectReference: {fileID: 0}
     - target: {fileID: 3188650222371119849, guid: 5905421fd79ff3a419959cc6a9a8be22,
         type: 3}
@@ -853,6 +843,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3188650221940119558, guid: 5905421fd79ff3a419959cc6a9a8be22,
+        type: 3}
+      propertyPath: m_AimSlider
+      value: 
+      objectReference: {fileID: 3525485427355832952}
+    - target: {fileID: 3188650221940119558, guid: 5905421fd79ff3a419959cc6a9a8be22,
+        type: 3}
+      propertyPath: m_ShootingAudio
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5905421fd79ff3a419959cc6a9a8be22, type: 3}
 --- !u!1001 &3525485428201813197
@@ -862,11 +862,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7875397975292750852}
     m_Modifications:
-    - target: {fileID: 3188650221940119556, guid: 5905421fd79ff3a419959cc6a9a8be22,
-        type: 3}
-      propertyPath: m_Name
-      value: Cannon
-      objectReference: {fileID: 0}
     - target: {fileID: 3188650221940119559, guid: 5905421fd79ff3a419959cc6a9a8be22,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -922,15 +917,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3188650221940119558, guid: 5905421fd79ff3a419959cc6a9a8be22,
+    - target: {fileID: 3188650221940119556, guid: 5905421fd79ff3a419959cc6a9a8be22,
         type: 3}
-      propertyPath: m_AimSlider
-      value: 
-      objectReference: {fileID: 3525485427355832952}
-    - target: {fileID: 3188650221940119558, guid: 5905421fd79ff3a419959cc6a9a8be22,
-        type: 3}
-      propertyPath: m_ShootingAudio
-      value: 
+      propertyPath: m_Name
+      value: Cannon
       objectReference: {fileID: 0}
     - target: {fileID: 3188650222371119849, guid: 5905421fd79ff3a419959cc6a9a8be22,
         type: 3}
@@ -941,6 +931,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3188650221940119558, guid: 5905421fd79ff3a419959cc6a9a8be22,
+        type: 3}
+      propertyPath: m_AimSlider
+      value: 
+      objectReference: {fileID: 3525485427355832952}
+    - target: {fileID: 3188650221940119558, guid: 5905421fd79ff3a419959cc6a9a8be22,
+        type: 3}
+      propertyPath: m_ShootingAudio
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5905421fd79ff3a419959cc6a9a8be22, type: 3}

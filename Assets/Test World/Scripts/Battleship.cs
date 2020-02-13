@@ -7,9 +7,8 @@ public class Battleship : MonoBehaviour, iTurret
 	public int m_PlayerNumber = 1;              // Used to identify the different players.
 	public float movementSpeed = 10;
 	public float turningSpeed = 60;
-	Vector3 m_GroundNormal;
-	float m_TurnAmount;
-	float m_ForwardAmount;
+	private float m_TurnAmount;
+	private float m_ForwardAmount;
 
 	void Update()
 	{
@@ -24,7 +23,6 @@ public class Battleship : MonoBehaviour, iTurret
 	{
 		if (move.magnitude > 1f) move.Normalize();
 		move = transform.InverseTransformDirection(move);
-		move = Vector3.ProjectOnPlane(move, m_GroundNormal);
 		m_TurnAmount = Mathf.Atan2(move.x, move.z);
 		m_ForwardAmount = move.z;
 	}
@@ -40,6 +38,11 @@ public class Battleship : MonoBehaviour, iTurret
 	}
 
 	public void NotifyObservers()
+	{
+		throw new System.NotImplementedException();
+	}
+
+	public void Turning()
 	{
 		throw new System.NotImplementedException();
 	}
