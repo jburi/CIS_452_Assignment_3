@@ -7,12 +7,6 @@ public class Turret : MonoBehaviour
 	public float camRayLength = 1000f;
 	public float turningSpeed = 50;
 
-	// Start is called before the first frame update
-	void Start()
-	{
-
-	}
-
 	// Update is called once per frame
 	void Update()
 	{

@@ -24,6 +24,7 @@ public class AITurret : MonoBehaviour
 	private bool m_Fired;                 // Whether or not the shell has been launched with this button press.
 
 	public float maximumLookDistance = 300f;
+	private float distance;
 	public float maximumAttackDistance = 150f;
 	public float minimumDistanceFromPlayer = 30f;
 	public float rotationDamping = 2f;
@@ -39,6 +40,8 @@ public class AITurret : MonoBehaviour
 	{
 		// The rate that the launch force charges up is the range of possible forces by the max charge time.
 		m_ChargeSpeed = (m_MaxLaunchForce - m_MinLaunchForce) / m_MaxChargeTime;
+
+		StartCoroutine(Shoot());
 	}
 
 	public void Update()
@@ -46,19 +49,24 @@ public class AITurret : MonoBehaviour
 		// The slider should have a default value of the minimum launch force.
 		m_AimSlider.value = m_MinLaunchForce;
 
-		var distance = Vector3.Distance(target.position, transform.position);
-
+		distance = Vector3.Distance(target.position, transform.position);
+		
 		if (distance <= maximumLookDistance)
 		{
 			LookAtTarget();
 		}
 
+		/*
 		// Otherwise, if the fire button has just started being pressed...
-		while (distance <= maximumAttackDistance)
+		if (distance <= maximumAttackDistance)
 		{
-			InvokeRepeating("Charge", 0.2f , m_MaxChargeTime);
-
+			StartCoroutine("Shoot");
 		}
+		else
+		{
+			StopCoroutine("Shoot");
+		}
+		*/
 	}
 
 
@@ -70,24 +78,7 @@ public class AITurret : MonoBehaviour
 		turret.transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * rotationDamping);
 	}
 
-
-	public void Shoot()
-	{
-		// Create an instance of the shell and store a reference to it's rigidbody.
-		Rigidbody shellInstance =
-			Instantiate(m_Shell, m_FireTransform.position, m_FireTransform.rotation) as Rigidbody;
-
-		// Set the shell's velocity to the launch force in the fire position's forward direction.
-		shellInstance.velocity = m_CurrentLaunchForce * m_FireTransform.forward;
-
-		// Change the clip to the firing clip and play it.
-		m_ShootingAudio.clip = m_FireClip;
-		m_ShootingAudio.Play();
-
-		// Reset the launch force.  This is a precaution in case of missing button events.
-		m_CurrentLaunchForce = m_MinLaunchForce;
-	}
-
+	/*
 	public void Charge()
 	{
 		// ... reset the fired flag and reset the launch force.
@@ -107,11 +98,35 @@ public class AITurret : MonoBehaviour
 		{
 			// ... use the max force and launch the shell.
 			m_CurrentLaunchForce = m_MaxLaunchForce;
-			Shoot();
 		}
-
 	}
+	*/
 
+	IEnumerator Shoot()
+	{
+		while (true)
+		{
+			if (distance <= maximumAttackDistance)
+			{ 
+			// Create an instance of the shell and store a reference to it's rigidbody.
+			Rigidbody shellInstance =
+			Instantiate(m_Shell, m_FireTransform.position, m_FireTransform.rotation) as Rigidbody;
+
+			// Set the shell's velocity to the launch force in the fire position's forward direction.
+			shellInstance.velocity = /*m_CurrentLaunchForce*/ 100 * m_FireTransform.forward;
+
+			// Change the clip to the firing clip and play it.
+			m_ShootingAudio.clip = m_FireClip;
+			m_ShootingAudio.Play();
+
+			// Reset the launch force.  This is a precaution in case of missing button events.
+			m_CurrentLaunchForce = m_MinLaunchForce;
+			}
+
+			yield return new WaitForSeconds(2.75f);
+		}
+	}
+	
 	IEnumerator ChargeSound()
 	{
 		// Change the clip to the charging clip and start it playing.

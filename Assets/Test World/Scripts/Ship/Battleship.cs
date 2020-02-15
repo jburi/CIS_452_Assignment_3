@@ -27,6 +27,23 @@ public class Battleship : MonoBehaviour, iTurret
 		m_ForwardAmount = move.z;
 	}
 
+	//Assignment 4 implementation
+	public virtual float MovementSpeed()
+	{
+		return movementSpeed;
+	}
+
+	void OnTriggerEnter(Collider other)
+	{
+		if (other.gameObject.CompareTag("Pick Up"))
+		{
+			other.gameObject.SetActive(false);
+		}
+	}
+
+
+	//Assignment 3 implementation
+
 	public void RegisterObserver(iTurret observer)
 	{
 		throw new System.NotImplementedException();
